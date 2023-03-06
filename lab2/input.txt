@@ -12,7 +12,7 @@ TEST #k TEST
 test6
 test #k test
 TEST7
-TEST #k TEST
+TEST #.0k TEST
 TEST8
 test #.10k test
 test9

@@ -16,5 +16,5 @@ TEST #k TEST
 TEST8
 test #k test
 test9
-test #4k test
+test #.4k test
 test10

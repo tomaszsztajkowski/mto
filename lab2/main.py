@@ -6,9 +6,9 @@ import re
 def my_printf(format_string,param):
     matches = re.split("\#(\d*)k", format_string)
     if(len(matches) > 1):
-        print(matches[0] + param[:int(matches[1])] + matches[2])
+        print(matches[0].swapcase() + param[:int(matches[1])].swapcase() + matches[2].swapcase())
     else:
-        print(matches[0])
+        print(matches[0].swapcase())
 
 data=sys.stdin.readlines()
 

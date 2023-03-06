@@ -6,7 +6,7 @@ import re
 def my_printf(format_string,param):
     matches = re.split("#k", format_string)
     if(len(matches) > 1):
-        print(matches[0].swapcase() + param.swapcase() + matches[2].swapcase())
+        print(matches[0].swapcase() + param.swapcase() + matches[1].swapcase())
         return
     
     matches = re.split("#\.(\d*)k", format_string)

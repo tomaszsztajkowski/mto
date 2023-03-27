@@ -18,3 +18,5 @@ test #g test
 2
 test #g test
 7
+test #g test
+8

@@ -2,3 +2,5 @@ test #g test
 1234
 test #g test
 123456789
+test #g test
+0

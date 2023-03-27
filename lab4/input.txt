@@ -8,3 +8,7 @@ test #g test
 10
 test #g test
 100
+test #g test
+001
+test #g test
+9

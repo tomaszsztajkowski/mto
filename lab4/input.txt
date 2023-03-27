@@ -12,3 +12,5 @@ test #g test
 001
 test #g test
 9
+test #g test
+99

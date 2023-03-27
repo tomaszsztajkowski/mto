@@ -4,3 +4,5 @@ test #g test
 123456789
 test #g test
 0
+test #g test
+10

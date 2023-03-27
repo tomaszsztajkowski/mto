@@ -14,3 +14,5 @@ test #g test
 9
 test #g test
 99
+test #g test
+2

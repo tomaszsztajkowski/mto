@@ -6,3 +6,5 @@ test #g test
 0
 test #g test
 10
+test #g test
+100

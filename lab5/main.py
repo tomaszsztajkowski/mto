@@ -23,4 +23,4 @@ def my_printf(format_string,param):
 # for i in range(0,len(data),2):
 #     my_printf(data[i].rstrip(),data[i+1].rstrip())
 
-my_printf("test #10g test", "2345")
+my_printf("test #0g test", "2345")

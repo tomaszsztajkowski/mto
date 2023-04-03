@@ -8,3 +8,13 @@ test #1g test
 2345
 test #10g test
 2345
+test #0g test
+2345
+test #2g test
+01
+test #2g test
+89
+test #2g test
+98
+test #2g test
+9999

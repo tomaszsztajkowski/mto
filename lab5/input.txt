@@ -6,3 +6,5 @@ test #2g test
 2345
 test #1g test
 2345
+test #10g test
+2345

@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 
 import sys
+import re
 
 def my_printf(format_string,param):
-    #print(format_string)
-    shouldDo=True
-    for idx in range(0,len(format_string)):
-        if shouldDo:
-            if format_string[idx] == '#' and format_string[idx+1] == 'g':
-                print(param.strip("0")[::-1],end="")
-                shouldDo=False
-            else:
-                print(format_string[idx],end="")
-        else:
-            shouldDo=True
-    print("")
+    matches = re.split("#k", format_string)
+    if(len(matches) > 1):
+        print(matches[0].swapcase() + param.swapcase() + matches[1].swapcase())
+        return
+    
+    matches = re.split("#\.(\d*)k", format_string)
+    if(len(matches) > 1):
+        if int(matches[1]) != '':
+            print(matches[0].swapcase() + param[:int(matches[1])].swapcase() + matches[2].swapcase())
+        return
+    else:
+        print(matches[0].swapcase())
 
 data=sys.stdin.readlines()
 

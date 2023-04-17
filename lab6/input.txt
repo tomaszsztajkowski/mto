@@ -1,20 +1,14 @@
-test #4g test
-2345
-test #3g test
-2345
-test #2g test
-2345
-test #1g test
-2345
-test #10g test
-2345
-test #0g test
-2345
-test #2g test
-01
-test #2g test
-89
-test #2g test
-98
-test #2g test
-9999
+#.-1g
+4378
+#.0g
+4378
+#.1g
+4378
+#.2g
+4378
+#.3g
+4378
+#.4g
+4378
+#.5g
+4378

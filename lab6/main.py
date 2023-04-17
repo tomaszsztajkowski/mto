@@ -4,16 +4,12 @@ import sys
 import re
 
 def my_printf(format_string,param):
-    # matches = re.split("#k", format_string)
-    # if(len(matches) > 1):
-    #     print(matches[0].swapcase() + param.swapcase() + matches[1].swapcase())
-    #     return
-    
-    matches = re.split("#(\d*)g", format_string)
+    matches = re.split("#.(\d*)g", format_string)
     if(len(matches) > 1):
         if int(matches[1]) != '':
-            param = "".join(['9' if d == '0' else str(int(d) - 1) for d in param])
-            print(matches[0] + '0' * (int(matches[1]) - len(param)) + param[:int(matches[1])] + matches[2])
+            param = "".join([str((int(d)*9+1)%10) for d in param])
+            new_format = matches[0] + "%" + matches[1] + "d" + matches[2]
+            sys.stdout.write(new_format % int(param))
         return
     else:
         print(matches[0])

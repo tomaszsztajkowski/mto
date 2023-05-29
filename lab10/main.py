@@ -6,7 +6,7 @@ import re
 def my_printf(format_string,param):
     matches = re.split("#a", format_string)
     if(len(matches) > 1):
-        param = int(param) // len(param)
+        param = int(param) // len(str(int(param)))
         if param % 2 == 0:
             sys.stdout.write(format_string.replace('#a', '%d') % int(param))
         else:

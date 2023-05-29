@@ -4,13 +4,14 @@ import sys
 import re
 
 def my_printf(format_string,param):
-    matches = re.split("#.(\d*)g", format_string)
+    matches = re.split("#a", format_string)
     if(len(matches) > 1):
-        if int(matches[1]) != '':
-            param = "".join([str((int(d)*9+1)%10) for d in param])
-            new_format = matches[0] + "%" + matches[1] + "d" + matches[2]
-            sys.stdout.write(new_format % int(param))
-            print()
+        param = int(param) // len(param)
+        if param % 2 == 0:
+            sys.stdout.write(format_string.replace('#a', '%d') % int(param))
+        else:
+            sys.stdout.write(format_string.replace('#a', '%x') % int(param))
+        print()
         return
     else:
         print(matches[0])

@@ -4,17 +4,12 @@ import sys
 import re
 
 def my_printf(format_string,param):
-    matches = re.split("#b", format_string)
-    if(len(matches) > 1):
-        param = int(param) // len(str(int(param)))
-        if param % 2 == 0:
-            sys.stdout.write(format_string.replace('#a', '%d') % int(param))
-        else:
-            sys.stdout.write(format_string.replace('#a', '%x') % int(param))
-        print()
-        return
-    else:
-        print(matches[0])
+    converted = ''
+    for i, digit in enumerate(bin(int(param))[::-1][:-2]):
+        converted = converted + ('0' if digit == '0' else chr(i % 26 + 97))
+    
+    print(converted[::-1])
+
 
 data=sys.stdin.readlines()
 

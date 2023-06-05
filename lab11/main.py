@@ -8,7 +8,7 @@ def my_printf(format_string,param):
     for i, digit in enumerate(bin(int(param))[::-1][:-2]):
         converted = converted + ('0' if digit == '0' else chr(i % 26 + 97))
     
-    print(converted[::-1])
+    print(format_string.replace('#b', converted[::-1]))
 
 
 data=sys.stdin.readlines()

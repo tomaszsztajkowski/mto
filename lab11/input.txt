@@ -4,3 +4,5 @@ abc#babc
 123
 #babc
 123
+#b
+0
